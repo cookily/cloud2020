@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "a575cce4-4723-4530-a277-6b7fef57d812",
+		"name": "springcloud2020",
+		"description": "springcloud2020学习笔记",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8001/payment/get/123",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/payment/get/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"payment",
+						"get",
+						"11"
+					]
+				},
+				"description": "cloud-provider-payment8001 查询"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8001/payment/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\"serial\":123\n}"
+				},
+				"url": {
+					"raw": "localhost:8001/payment/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"payment",
+						"create"
+					]
+				},
+				"description": "cloud-provider-payment8001 添加"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
