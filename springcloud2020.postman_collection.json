@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "a575cce4-4723-4530-a277-6b7fef57d812",
+		"name": "springcloud2020",
+		"description": "springcloud2020学习笔记",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cloud-provider-payment8001-http://localhost:8001/payment/get/11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/payment/get/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"payment",
+						"get",
+						"11"
+					]
+				},
+				"description": "cloud-provider-payment8001 查询"
+			},
+			"response": []
+		},
+		{
+			"name": "cloud-provider-payment8001-localhost:8001/payment/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\"serial\":123\n}"
+				},
+				"url": {
+					"raw": "localhost:8001/payment/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"payment",
+						"create"
+					]
+				},
+				"description": "cloud-provider-payment8001 添加"
+			},
+			"response": []
+		},
+		{
+			"name": "cloud-consumer-order80-http://localhost:80/consumer/payment/get/123",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/consumer/payment/get/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"consumer",
+						"payment",
+						"get",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cloud-consumer-order80-localhost:80/consumer/payment/create?serial=121212121212",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:80/consumer/payment/create?serial=121212121212",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"consumer",
+						"payment",
+						"create"
+					],
+					"query": [
+						{
+							"key": "serial",
+							"value": "121212121212"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
