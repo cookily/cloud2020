@@ -1,5 +1,5 @@
 server:
-  port: 7001
+  port: 7002
 
 
 eureka:
@@ -7,7 +7,7 @@ eureka:
 
     #eureka服务端的实例名称
     #hostname: localhost
-    hostname: eureka7001.com
+    hostname: eureka7002.com
 
   client:
 
@@ -22,8 +22,10 @@ eureka:
       #设置与Eureka Server交互的地址查询服务和注册服务都要依赖这个地址
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
-      #单机就是7001自己
-      #defaultZone: http://eureka7001.com:7001/eureka/
+      #单机就是7002自己
+      #defaultZone: http://eureka7002.com:7002/eureka/
 
       #集群指向其它eureka
-      defaultZone: http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+
