@@ -113,6 +113,49 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "cloud-consumer-order80-http://localhost:80/consumer/payment/getForEntity/11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/consumer/payment/getForEntity/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"consumer",
+						"payment",
+						"getForEntity",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cloud-provider-payment8001-http://localhost:8001/payment/discovery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/payment/discovery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"payment",
+						"discovery"
+					]
+				},
+				"description": "服务发现"
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
